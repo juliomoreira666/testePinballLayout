@@ -3,7 +3,7 @@
 Para vizualizar o Teste é necessário iniciar dois requisitos
 
 1. A API criada em Node.js Especificamente pra esse teste.
-Dentro da pasta vue.js > api execute o seguinte comando no terminal 'npm install' logo em seguida 'node server.js'
+Dentro da pasta vue.js > ApiBall execute o seguinte comando no terminal 'npm install' logo em seguida 'node server.js'
 
 2. As dependencias do Vue.js
 Dentro da pasta vue.js > pinBall Execute o seguinte comando no terminal 'npm install' logo em seguida 'npm run dev'
