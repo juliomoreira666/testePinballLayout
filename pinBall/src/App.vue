@@ -2,9 +2,9 @@
 <template>
 <div>
 <div class="header">
-<div class="container">
+<div class="container-header">
 <div class="logo"><img src="https://i.imgur.com/9LsG4wf.png"/></div>
-<div class="seacrh"><input type="search" class="filtro" v-on:input="filtro = $event.target.value" placeholder="FILTRE PELO TITULO!"></div>
+<div class="seacrh"><input type="input" class="filtro" v-on:input="filtro = $event.target.value" placeholder=""></div>
 <div class="user"></div>
 </div>
 </div>
@@ -71,7 +71,7 @@ export default {
 }
 
 body {
-	background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  background-color: #f0efee;
   font-family: 'Open Sans', sans-serif;
   min-height: 1000px;
 }
@@ -83,16 +83,28 @@ body {
 	margin: 50px auto;
 }
 
+#columns h1, figcaption {
+  padding: 20px;
+}
+
+
+
+#columns h1 {
+ color: #717171;
+}
+
+
 div#columns figure {
 	background: #fefefe;
 	border: 2px solid #fcfcfc;
-	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
 	margin: 0 2px 15px;
-	padding: 15px;
+	padding: 0px;
 	padding-bottom: 10px;
 	transition: opacity .4s ease-in-out;
   display: inline-block;
   column-break-inside: avoid;
+  border-radius: 5px;
 }
 
 div#columns figure img {
@@ -104,7 +116,7 @@ div#columns figure img {
 
 div#columns figure figcaption {
   font-size: .9rem;
-	color: #444;
+	color: #acaaaa;
   line-height: 1.5;
 }
 
@@ -134,15 +146,23 @@ html, body {
   height: 100%;
   width: 100%;
 }
-.header {
-  padding: 20px;
-  height: 50px;
-  background-color: #ffffff;
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
+ .header {
+   border-bottom: 1px solid #d6d5d4;
+   box-shadow: 1px  1px #d6d5d4;
+   position: relative;
+    height: 100px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+
+}
+.header div {
+  padding:0.77777em;
 }
 .logo {
+  cursor: pointer;
   float: left;
   width: 33.33%;
   position: relative;
@@ -159,9 +179,10 @@ html, body {
   position: relative;
 }
 .filtro {
+  box-shadow: 0px  1px #d6d5d4;
   margin-top: 1px;
    box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #e7e7e7;
     border-radius: 5px;
     font-size: 16px;
     background-color: #f7f6f6;
@@ -170,13 +191,22 @@ html, body {
     padding: 12px 20px 12px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
-    width: 422px;
-    height: 32px;
+    width: 430px;
+    height: 40px;
+    background-image: url('https://i.imgur.com/eYjXDi0.png');
+    background-position:  95% 10px;
+    cursor: pointer;
 
+
+}
+.container-header {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .filtro:focus {
-    width: 35%;
+    width: 45%;
 }
 
 /* Normalize CSS */
