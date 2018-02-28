@@ -24,8 +24,12 @@
       <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus sapien, ullamcorper</figcaption>
       <div class="rating-face">
         <div class="rating">
-        <i class="far fa-star"></i>
-        </div>
+        <i class="far fa-star voted"></i>
+        <i class="far fa-star voted"></i>
+        <i class="far fa-star no-voted"></i>
+        <i class="far fa-star no-voted"></i>
+        <img class="faceico" src="https://i.imgur.com/ZJk2Y7n.png"/>
+      </div>
       </div>
     </figure>
   </div>
@@ -87,9 +91,24 @@ $('.rating input').change(function () {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+.faceico {
+  width: 21px!important;
+  height: 21px!important;
+  float: right;
+}
+i.voted {
+  color: #b9cb41;
+}
+i.no-voted {
+  color: #dddddd;
+}
+
+.rating-face {
+      padding: 15px;
+}
 i 
 {
-  font: 15px/1 FontAwesome;
+  font: 18px/1 FontAwesome;
 }
 body {
   background-color: #f0efee;
@@ -137,7 +156,7 @@ div#columns figure {
 	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.5);
 	margin: 0 2px 15px;
 	padding: 0px;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	transition: opacity .4s ease-in-out;
   display: inline-block;
   column-break-inside: avoid;
