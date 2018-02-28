@@ -1,30 +1,36 @@
 
 <template>
 <div>
-<div class="header">
-<div class="container-header">
-<div class="logo">
-<img src="https://i.imgur.com/9LsG4wf.png"/>
+  <div class="header">
+    <div class="container-header">
+      <div class="logo">
+        <img src="https://i.imgur.com/9LsG4wf.png" />
+      </div>
+      <div class="menu">
+        <img src="https://i.imgur.com/oUlCbi2.png" />
+      </div>
+      <div class="seacrh"><input type="input" class="filtro" v-on:input="filtro = $event.target.value" placeholder=""></div>
+      <div class="user">
+        <img src="https://i.imgur.com/VZ9inpG.png" />
+        <span class="welcome">Welcome John</span>
+      </div>
+    </div>
+  </div>
+  <div id="columns" class="container">
+    <figure v-for="foto in fotosComFiltro">
+      <img :src="foto.url" :alt="foto.titulo">
+      <h1>{{ foto.titulo }}</h1>
+      <div class="locale"><img src="https://i.imgur.com/6y3tK5z.png" />Movies</div>
+      <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus sapien, ullamcorper</figcaption>
+      <div class="rating-face">
+        <div class="rating">
+        <i class="far fa-star"></i>
+        </div>
+      </div>
+    </figure>
+  </div>
 </div>
-<div class="menu">
-<img src="https://i.imgur.com/oUlCbi2.png"/>
-</div>
-<div class="seacrh"><input type="input" class="filtro" v-on:input="filtro = $event.target.value" placeholder=""></div>
-<div class="user">
-<img src="https://i.imgur.com/VZ9inpG.png"/>
-<span class="welcome">Welcome John</span>
-</div>
-</div>
-</div>
-<div id="columns" class="container">
-  <figure v-for="foto in fotosComFiltro">
-  <img :src="foto.url" :alt="foto.titulo">
-  <h1>{{ foto.titulo }}</h1>
-  <div class="locale"><img src="https://i.imgur.com/6y3tK5z.png"/>Movies</div>
-  <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus sapien, ullamcorper</figcaption>
-	</figure>
-</div>
-</div>
+
 </template>
 
 <script>
@@ -69,14 +75,21 @@ export default {
       .then(fotos => this.fotos = fotos, err => console.log(err));
   }
 }
+
+$('.rating input').change(function () {
+  var $radio = $(this);
+  $('.rating .selected').removeClass('selected');
+  $radio.closest('label').addClass('selected');
+});
+
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-
-* {
-  font-family: 'Open Sans', sans-serif;
+i 
+{
+  font: 15px/1 FontAwesome;
 }
 body {
   background-color: #f0efee;
