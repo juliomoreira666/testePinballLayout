@@ -44,7 +44,6 @@ export default {
       if (this.filtro) {
         let exp = new RegExp(this.filtro.trim(), 'i');
         return this.fotos.filter(foto => exp.test(foto.titulo));
-        // filtra a lista, por enquanto vamos retornar uma lista em branco
         return [];
       } else {
         // se o campo estiver vazio, não filtramos, retornamos a lista
@@ -64,12 +63,11 @@ export default {
 </script>
 
 <style>
-@font-face{font-family:'Calluna';
- src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
 	background: url(//subtlepatterns.com/patterns/scribble_light.png);
-  font-family: Calluna, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   min-height: 1000px;
 }
 #columns {
