@@ -20,6 +20,7 @@
   <figure v-for="foto in fotosComFiltro">
   <img :src="foto.url" :alt="foto.titulo">
   <h1>{{ foto.titulo }}</h1>
+  <div class="locale"><img src="https://i.imgur.com/6y3tK5z.png"/>Movies</div>
   <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lacus sapien, ullamcorper</figcaption>
 	</figure>
 </div>
@@ -91,12 +92,28 @@ body {
 }
 
 #columns h1, figcaption {
-  padding: 20px;
+  padding: 15px;
+}
+
+.locale img {
+  border: none!important;
+  margin: 0 auto!important;
+  padding: 0!important;
+  margin-right: 10px!important;
+  width: 9px!important;
+  height: 12px!important;
+}
+
+.locale {
+  padding: 14px;
+    color: #acaaaa;
+    font-size: 13.99px;
 }
 
 
 
 #columns h1 {
+font-size: 17.99px;
  color: #717171;
 }
 
@@ -116,15 +133,17 @@ div#columns figure {
 
 div#columns figure img {
 	width: 100%; height: auto;
-	border-bottom: 1px solid #ccc;
+  /*border-bottom: 1px solid #ccc;*/
 	padding-bottom: 15px;
 	margin-bottom: 5px;
 }
 
 div#columns figure figcaption {
-  font-size: .9rem;
+  font-size: 13px;
 	color: #acaaaa;
   line-height: 1.5;
+  text-align: justify;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 div#columns small { 
@@ -180,7 +199,10 @@ html, body {
   text-align: center;
   position: relative;
   padding: 18px!important;
+}
 
+.menu img {
+  cursor: pointer;
 }
 .seacrh {
      float: left;
@@ -224,6 +246,14 @@ html, body {
     width: 80%;
 }
 
+.welcome {
+  float: right;
+  margin: 10px auto;
+  width: 72%;
+  color: #8c8c8c;
+  cursor: pointer;
+}
+
 
 
 /* Normalize CSS */
@@ -254,15 +284,15 @@ body {
   margin: 0;
 }
 
+h1 {
+  margin: 0px!important;
+}
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
 
 /* Grouping content
    ========================================================================== */
