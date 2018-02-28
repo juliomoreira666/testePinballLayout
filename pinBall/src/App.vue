@@ -1,7 +1,7 @@
 
 <template>
 <div>
-  <div class="header">
+  <div class="header menu-desk">
     <div class="container-header">
       <div class="logo">
         <img src="https://i.imgur.com/9LsG4wf.png" />
@@ -16,6 +16,20 @@
       </div>
     </div>
   </div>
+
+  <div style="display: none;" class="header menu-mobile">
+    <div class="container-header">
+      <div class="menu">
+        <img src="https://i.imgur.com/oUlCbi2.png" />
+      </div>
+       <div class="logo">
+        <img src="https://i.imgur.com/9LsG4wf.png" />
+      </div>
+      <div class="seacrh"><input type="input" class="filtro" v-on:input="filtro = $event.target.value" placeholder=""></div>
+    </div>
+  </div>
+
+
   <div id="columns" class="container">
     <figure v-for="foto in fotosComFiltro">
       <img :src="foto.url" :alt="foto.titulo">
@@ -90,7 +104,42 @@ $('.rating input').change(function () {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/*Media queries*/
+@media all and (max-width: 1000px) and (min-width: 320px) {
+  #columns {
+	column-width: 435px!important;
+}
+div#columns figure {
+  width: 100%;
+}
+.menu-mobile {
+  display: block!important;
+}
+.menu-desk {
+  display: none;
+}
+.seacrh {
+  text-align: center!important;
+  width: 33%!important;
+}
+.logo {
+  text-align: center;
+  width: 33%!important;
+}
+.menu {
+  width: 22%!important;
+}
+.filtro {
+  width: 10%!important;
+  padding: 0px!important;
+      background-position: 69% 7px!important;
+}
+.filtro:focus {
+    width: 50%!important;
+    position: absolute;
 
+}
+}
 .faceico {
   width: 21px!important;
   height: 21px!important;
