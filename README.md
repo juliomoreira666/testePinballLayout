@@ -1,5 +1,7 @@
 # Teste Feito em Vue.js
 
+# Teste atualizado!
+
 Para vizualizar o Teste é necessário iniciar dois requisitos
 
 1. A API criada em Node.js Especificamente pra esse teste.
