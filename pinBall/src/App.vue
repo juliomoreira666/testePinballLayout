@@ -3,9 +3,17 @@
 <div>
 <div class="header">
 <div class="container-header">
-<div class="logo"><img src="https://i.imgur.com/9LsG4wf.png"/></div>
+<div class="logo">
+<img src="https://i.imgur.com/9LsG4wf.png"/>
+</div>
+<div class="menu">
+<img src="https://i.imgur.com/oUlCbi2.png"/>
+</div>
 <div class="seacrh"><input type="input" class="filtro" v-on:input="filtro = $event.target.value" placeholder=""></div>
-<div class="user"></div>
+<div class="user">
+<img src="https://i.imgur.com/VZ9inpG.png"/>
+<span class="welcome">Welcome John</span>
+</div>
 </div>
 </div>
 <div id="columns" class="container">
@@ -69,14 +77,13 @@ export default {
 * {
   font-family: 'Open Sans', sans-serif;
 }
-
 body {
   background-color: #f0efee;
   font-family: 'Open Sans', sans-serif;
   min-height: 1000px;
 }
 #columns {
-	column-width: 320px;
+	column-width: 260px;
 	column-gap: 15px;
   width: 90%;
 	max-width: 1100px;
@@ -159,24 +166,32 @@ html, body {
 
 }
 .header div {
-  padding:0.77777em;
+  padding: 0.99999999em;
 }
 .logo {
   cursor: pointer;
   float: left;
-  width: 33.33%;
+  width: 15%;
   position: relative;
 }
-.search {
-  float: left;
-  width: 33.33%;
+.menu {
+ float: left;
+  width: 10%;
+  text-align: center;
   position: relative;
+  padding: 18px!important;
+
+}
+.seacrh {
+     float: left;
+    width: 33%;
+    position: relative;
 
 }
 .user {
-  float: left;
-  width: 33.33%;
-  position: relative;
+  float: right;
+    width: 19%;
+    position: relative;
 }
 .filtro {
   box-shadow: 0px  1px #d6d5d4;
@@ -192,9 +207,9 @@ html, body {
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     width: 430px;
-    height: 40px;
+    height: 34px;
     background-image: url('https://i.imgur.com/eYjXDi0.png');
-    background-position:  95% 10px;
+    background-position: 97% 7px;
     cursor: pointer;
 
 
@@ -206,8 +221,10 @@ html, body {
 }
 
 .filtro:focus {
-    width: 45%;
+    width: 80%;
 }
+
+
 
 /* Normalize CSS */
 
