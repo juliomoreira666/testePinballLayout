@@ -65,6 +65,11 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
 	background: url(//subtlepatterns.com/patterns/scribble_light.png);
   font-family: 'Open Sans', sans-serif;
